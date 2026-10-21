@@ -61,8 +61,9 @@
           </select></div>
         <div class="f"><label for="q-loc">Location</label><input id="q-loc" name="location" placeholder="Town or postcode"></div>
         <div class="f full"><label for="q-msg">Project details</label><textarea id="q-msg" name="details" placeholder="Area to be tiled, approximate size, timescales…"></textarea></div>
+        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="q-hp">Leave this empty</label><input id="q-hp" name="website" tabindex="-1" autocomplete="off"></div>
         <label class="consent" for="q-consent"><input type="checkbox" id="q-consent"><span>I agree to TileTrust Ltd using these details to respond to my enquiry, as set out in the <a href="privacy.html">privacy notice</a>.</span></label>
-        <div class="form-foot"><button class="btn btn-primary" type="submit">Send enquiry</button><small>Opens your email app with your details filled in. Attach photos or drawings before sending.</small></div>
+        <div class="form-foot"><button class="btn btn-primary" type="submit">Send enquiry</button><small>Your enquiry comes straight to us. You can email photos or drawings to dan@tiletrustltd.co.uk.</small></div>
         <p id="formmsg" role="status"></p>
       </form>
     </div>
@@ -96,8 +97,11 @@
     if(!document.getElementById('q-consent').checked){msg.textContent='Please tick the box to agree to us using your details to reply.';return;}
     var body='Name: '+v('q-name')+'\nCompany: '+v('q-company')+'\nPhone: '+v('q-phone')+'\nEmail: '+v('q-email')+'\nProject type: '+v('q-sector')+'\nLocation: '+v('q-loc')+'\n\n'+v('q-msg')+'\n\n(Photos or drawings attached if available)';
     var href='mailto:dan@tiletrustltd.co.uk?subject='+encodeURIComponent('Quote request – '+v('q-sector'))+'&body='+encodeURIComponent(body);
-    msg.textContent='Your email app should open with the enquiry ready. Attach any photos or drawings, then send. If it doesn\u2019t open, email dan@tiletrustltd.co.uk directly.';
-    window.location.href=href;
+    var fallback=function(){msg.textContent='Your email app should open with the enquiry ready. Attach any photos or drawings, then send. If it doesn\u2019t open, email dan@tiletrustltd.co.uk directly.';window.location.href=href;};
+    var btn=f.querySelector('button[type=submit]');btn.disabled=true;msg.textContent='Sending\u2026';
+    fetch('/api/enquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:v('q-name'),company:v('q-company'),phone:v('q-phone'),email:v('q-email'),sector:v('q-sector'),location:v('q-loc'),details:v('q-msg'),consent:true,tt_hp:document.getElementById('q-hp').value})})
+      .then(function(r){btn.disabled=false;if(r.ok){f.reset();msg.textContent='Thanks, your enquiry has been sent to Dan and Jay. If you have photos or drawings, email them to dan@tiletrustltd.co.uk.';}else{fallback();}})
+      .catch(function(){btn.disabled=false;fallback();});
   });}
 
 })();
