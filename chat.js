@@ -233,6 +233,10 @@
     });
   }
 
+  function fullText(name, company, email, phone, pref) {
+    return ['Name: ' + name, company ? 'Company: ' + company : '', 'Email: ' + email, phone ? 'Phone: ' + phone : '', 'Preferred contact: ' + pref].filter(Boolean).join('\n') + '\n\n' + lines().join('\n');
+  }
+
   function contactForm(c) {
     var f = el('form', { 'class': 'tc-form tc-contact', novalidate: '' });
     function field(id, lab, type, ac, req, key) {
@@ -275,9 +279,21 @@
       function fail() {
         send.disabled = false; send.textContent = 'Send enquiry';
         clearControls();
-        say('Sorry, that did not send. Your email app will open with your details ready to send to ' + EMAIL + ' instead' + (files.length ? '. Please attach your files to that email.' : '.'));
-        var c2 = controls(); c2.appendChild(el('a', { 'class': 'tc-go', href: mailtoHref() }, 'Open email'));
-        window.location.href = mailtoHref();
+        say('Sorry, that didn\u2019t go through on our side. Nothing is lost: copy your details below and email them to ' + EMAIL + ', or call 07434 005958.' + (files.length ? ' Please attach your files to the email.' : ''));
+        var c2 = controls();
+        var txt = fullText(nm.value.trim(), co.value.trim(), em.value.trim(), phone, prefV);
+        var box = el('textarea', { rows: '6', readonly: '', 'aria-label': 'Your enquiry details' }); box.value = txt; c2.appendChild(box);
+        var row = el('div', { 'class': 'tc-row' });
+        var cp = el('button', { type: 'button', 'class': 'tc-go' }, 'Copy details');
+        cp.addEventListener('click', function () {
+          var ok = function () { cp.textContent = 'Copied'; };
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, function () { box.select(); document.execCommand('copy'); ok(); });
+          else { box.select(); document.execCommand('copy'); ok(); }
+        });
+        row.appendChild(cp);
+        row.appendChild(el('a', { 'class': 'tc-go tc-ghost', href: 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Quote request' + (S.a.sector ? ' – ' + S.a.sector : '')) + '&body=' + encodeURIComponent(txt) }, 'Open email'));
+        row.appendChild(el('a', { 'class': 'tc-go tc-ghost', href: 'tel:+447434005958' }, 'Call us'));
+        c2.appendChild(row);
       }
     });
     nm.focus();

@@ -835,3 +835,5 @@ footer::before{background:var(--hair);height:1px}
 .tc-files:empty{display:none}
 .tc-summary{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.88rem}
 .tc-summary ul{margin:6px 0;padding-left:18px}
+.tc-row{display:flex;flex-wrap:wrap;gap:8px}
+.tc-ghost{background:none;color:var(--accent);border:1px solid var(--accent)}
