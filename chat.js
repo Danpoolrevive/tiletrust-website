@@ -310,7 +310,7 @@
     say('Hi, thanks for getting in touch with TileTrust.');
     say('A few quick questions will help us understand your project. Just tap to answer, skip anything you\u2019re not sure about, and add photos or drawings if you have them.');
     say('The more you can tell us, the quicker and more accurate your quote. Dan or Jay will then get back to you personally by email or phone.');
-    var c = controls(), b = el('button', { type: 'button', 'class': 'tc-go' }, 'Start \u2013 about 2 minutes');
+    var c = controls(), b = el('button', { type: 'button', 'class': 'tc-go' }, 'Start your enquiry');
     b.addEventListener('click', function () { S.hist = []; go(0); });
     c.appendChild(b); b.focus();
   }
