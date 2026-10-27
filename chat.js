@@ -308,9 +308,9 @@
   }
   function intro() {
     say('Hi, thanks for getting in touch with TileTrust.');
-    say('A few quick questions help us understand your job. It takes about a minute, and you can skip anything. The more you can tell us, the quicker and more accurate your quote will be.');
-    say('For anything specific, you will always get the best answers from Dan and Jay directly, so we will follow up by email or phone.');
-    var c = controls(), b = el('button', { type: 'button', 'class': 'tc-go' }, 'Start');
+    say('A few quick questions will help us understand your project. Just tap to answer, skip anything you\u2019re not sure about, and add photos or drawings if you have them.');
+    say('The more you can tell us, the quicker and more accurate your quote. Dan or Jay will then get back to you personally by email or phone.');
+    var c = controls(), b = el('button', { type: 'button', 'class': 'tc-go' }, 'Start \u2013 about 2 minutes');
     b.addEventListener('click', function () { S.hist = []; go(0); });
     c.appendChild(b); b.focus();
   }
