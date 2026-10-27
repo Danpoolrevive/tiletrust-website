@@ -2,7 +2,7 @@
 // Env vars (set in the Vercel project "tiletrust-website"):
 //   RESEND_API_KEY  - Resend API key (the same one the PoolRevive project uses)
 //   ENQUIRY_FROM    - a sender address on a domain verified in Resend
-//   ENQUIRY_TO      - where enquiries go (dan@tiletrustltd.co.uk)
+//   ENQUIRY_TO      - where enquiries go (info@ and dan@tiletrustltd.co.uk both land in the TileTrust Ltd mailbox)
 // If any are missing the function answers 503 and the page falls back to opening the visitor's email app.
 
 const FIELDS = ['name', 'company', 'phone', 'email', 'sector', 'location', 'details'];
