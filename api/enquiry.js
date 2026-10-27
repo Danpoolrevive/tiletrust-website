@@ -1,7 +1,7 @@
 // Vercel Function: receives the TileTrust quote form and emails it via Resend.
 // Env vars (set in the Vercel project "tiletrust-website"):
 //   RESEND_API_KEY  - Resend API key (the same one the PoolRevive project uses)
-//   ENQUIRY_FROM    - a sender address on a domain verified in Resend
+//   ENQUIRY_FROM    - fallback sender; emails now go from website@tiletrustltd.co.uk (domain verified in Resend)
 //   ENQUIRY_TO      - where enquiries go (info@ and dan@tiletrustltd.co.uk both land in the TileTrust Ltd mailbox)
 // If any are missing the function answers 503 and the page falls back to opening the visitor's email app.
 
@@ -26,7 +26,8 @@ module.exports = async function handler(req, res) {
   if (body.tt_hp) return res.status(200).json({ ok: true }); // honeypot: bots fill hidden fields
   const data = Object.fromEntries(FIELDS.map((f) => [f, String(body[f] ?? '').slice(0, 4000).trim()]));
   if (!data.name || !data.email || !body.consent) return res.status(422).json({ ok: false, error: 'missing_fields' });
-  const { RESEND_API_KEY, ENQUIRY_FROM, ENQUIRY_TO } = process.env;
+  const { RESEND_API_KEY, ENQUIRY_TO } = process.env;
+  const ENQUIRY_FROM = 'website@tiletrustltd.co.uk';
   if (!RESEND_API_KEY || !ENQUIRY_FROM || !ENQUIRY_TO) {
     console.error('[enquiry] RESEND_API_KEY, ENQUIRY_FROM or ENQUIRY_TO is not set in Vercel');
     return res.status(503).json({ ok: false, error: 'email_not_configured' });
