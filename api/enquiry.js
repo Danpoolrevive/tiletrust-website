@@ -17,6 +17,20 @@ const readBody = async (req) => {
   return Object.fromEntries(new URLSearchParams(raw));
 };
 
+// Spam check: sales pitches (SEO, web design, marketing) still arrive, but the subject starts with "[Possible spam]".
+const SPAM_PATTERNS = [
+  /\bseo\b/i, /search engine/i, /\brank(ing|ings|ed)?\b[^.]{0,40}\bgoogle\b/i, /\bgoogle\b[^.]{0,40}\brank(ing|ings)?\b/i,
+  /first page of google/i, /page one of google/i, /web ?design/i, /website (design|redesign|development|developer)/i,
+  /re-?design (of )?your (website|site)/i, /back ?links?/i, /digital marketing/i, /marketing (agency|services|team|strategy)/i,
+  /lead generation/i, /(more|increase|boost)[^.]{0,30}(traffic|visitors|leads)/i, /guest post/i, /social media (marketing|management)/i,
+  /app development/i, /outsourc/i, /\bcrypto\b/i, /business (loan|funding)/i, /virtual assistant/i, /\bunsubscribe\b/i,
+];
+const spamCheck = (text) => {
+  const hits = SPAM_PATTERNS.filter((p) => p.test(text)).length;
+  const links = (text.match(/https?:\/\/|www\./gi) || []).length;
+  return hits > 0 || links >= 3;
+};
+
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 module.exports = async function handler(req, res) {
@@ -39,6 +53,7 @@ module.exports = async function handler(req, res) {
     .filter((a) => a && typeof a.content === 'string' && typeof a.filename === 'string' && OK_FILE.test(a.filename))
     .map((a) => ({ filename: a.filename.replace(/[^\w.\- ]+/g, '_').slice(0, 100), content: a.content }));
   if (attachments.reduce((n, a) => n + a.content.length * 0.75, 0) > 3.3 * 1024 * 1024) attachments = [];
+  const spam = spamCheck(Object.values(data).join(' '));
   const rows = FIELDS.map((f) => `<tr><th align="left" style="padding:4px 12px 4px 0">${LABELS[f]}</th><td>${esc(data[f]).replace(/\n/g, '<br>')}</td></tr>`).join('');
   const r = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -47,7 +62,7 @@ module.exports = async function handler(req, res) {
       from: `TileTrust website <${ENQUIRY_FROM}>`,
       to: [ENQUIRY_TO],
       reply_to: data.email,
-      subject: `TileTrust quote request: ${data.name}${data.sector ? `, ${data.sector}` : ''}`,
+      subject: `${spam ? '[Possible spam] ' : ''}TileTrust quote request: ${data.name}${data.sector ? `, ${data.sector}` : ''}`,
       html: `<p>New quote request from www.tiletrustltd.co.uk${body.source === 'chat' ? ' (website chat)' : ''}.</p><table>${rows}</table>${attachments.length ? `<p>${attachments.length} file(s) attached.</p>` : ''}<p>Reply to this email to answer the customer directly.</p>`,
       ...(attachments.length ? { attachments } : {}),
     }),
@@ -56,6 +71,8 @@ module.exports = async function handler(req, res) {
     if (r) console.error(`[enquiry] Resend refused (${r.status}):`, await r.text());
     return res.status(502).json({ ok: false, error: 'send_failed' });
   }
+  // No customer copy for likely spam, so we don't confirm our address to senders of sales pitches.
+  if (spam) return res.status(200).json({ ok: true });
   // Copy for the customer, so they know it arrived. Their reply comes straight back to us. A failure here never blocks the enquiry.
   await fetch('https://api.resend.com/emails', {
     method: 'POST',
