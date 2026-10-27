@@ -31,6 +31,13 @@ module.exports = async function handler(req, res) {
     console.error('[enquiry] RESEND_API_KEY, ENQUIRY_FROM or ENQUIRY_TO is not set in Vercel');
     return res.status(503).json({ ok: false, error: 'email_not_configured' });
   }
+  // Photos and drawings from the website chat (already shrunk in the browser). Keep within Vercel's 4.5 MB request limit.
+  const OK_FILE = /\.(jpe?g|png|webp|gif|heic|heif|pdf)$/i;
+  let attachments = Array.isArray(body.attachments) ? body.attachments.slice(0, 6) : [];
+  attachments = attachments
+    .filter((a) => a && typeof a.content === 'string' && typeof a.filename === 'string' && OK_FILE.test(a.filename))
+    .map((a) => ({ filename: a.filename.replace(/[^\w.\- ]+/g, '_').slice(0, 100), content: a.content }));
+  if (attachments.reduce((n, a) => n + a.content.length * 0.75, 0) > 3.3 * 1024 * 1024) attachments = [];
   const rows = FIELDS.map((f) => `<tr><th align="left" style="padding:4px 12px 4px 0">${LABELS[f]}</th><td>${esc(data[f]).replace(/\n/g, '<br>')}</td></tr>`).join('');
   const r = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -40,12 +47,25 @@ module.exports = async function handler(req, res) {
       to: [ENQUIRY_TO],
       reply_to: data.email,
       subject: `TileTrust quote request: ${data.name}${data.sector ? `, ${data.sector}` : ''}`,
-      html: `<p>New quote request from www.tiletrustltd.co.uk.</p><table>${rows}</table><p>Reply to this email to answer the customer directly.</p>`,
+      html: `<p>New quote request from www.tiletrustltd.co.uk${body.source === 'chat' ? ' (website chat)' : ''}.</p><table>${rows}</table>${attachments.length ? `<p>${attachments.length} file(s) attached.</p>` : ''}<p>Reply to this email to answer the customer directly.</p>`,
+      ...(attachments.length ? { attachments } : {}),
     }),
   }).catch((e) => { console.error('[enquiry] could not reach Resend:', e); return null; });
   if (!r || !r.ok) {
     if (r) console.error(`[enquiry] Resend refused (${r.status}):`, await r.text());
     return res.status(502).json({ ok: false, error: 'send_failed' });
   }
+  // Copy for the customer, so they know it arrived. Their reply comes straight back to us. A failure here never blocks the enquiry.
+  await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from: `TileTrust Ltd <${ENQUIRY_FROM}>`,
+      to: [data.email],
+      reply_to: ENQUIRY_TO,
+      subject: 'We have received your enquiry – TileTrust Ltd',
+      html: `<p>Hi ${esc(data.name.split(' ')[0])},</p><p>Thanks for getting in touch with TileTrust. Dan or Jay will get back to you as soon as possible.</p><p>Here is a copy of what you sent:</p><table>${rows}</table><p>If you have anything to add, such as drawings or photos, just reply to this email.</p><p>Kind regards,<br>TileTrust Ltd<br>07434 005958 · www.tiletrustltd.co.uk</p>`,
+    }),
+  }).catch((e) => console.error('[enquiry] customer copy failed:', e));
   return res.status(200).json({ ok: true });
 };

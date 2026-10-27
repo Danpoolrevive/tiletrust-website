@@ -823,3 +823,15 @@ footer{background:var(--k0)}
 footer::before{background:var(--hair);height:1px}
 
 @media(prefers-reduced-motion:reduce){.h4-card,.h4-card img,.h4-card .go,.h4-svc a,.h4-svc a svg,.h4-btn{transition:none}}
+.tc-label{font-size:.85rem;color:var(--muted);margin-top:4px}
+.tc-choice[aria-pressed=true]{background:var(--accent);color:#fff}
+.tc-text{width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.tc-controls textarea{width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.tc-drop{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border:2px dashed var(--accent);border-radius:10px;cursor:pointer;color:var(--accent);font-weight:600;font-size:.92rem;position:relative}
+.tc-file{position:absolute;inset:0;opacity:0;cursor:pointer}
+.tc-files{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;font-size:.85rem}
+.tc-files li{display:flex;justify-content:space-between;gap:8px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:5px 8px;word-break:break-all}
+.tc-files button{background:none;border:0;color:var(--muted);cursor:pointer;font-size:1.1rem;line-height:1}
+.tc-files:empty{display:none}
+.tc-summary{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.88rem}
+.tc-summary ul{margin:6px 0;padding-left:18px}
