@@ -1,4 +1,5 @@
-
+/* <picture> wrappers (AVIF/WebP) take no box of their own, so the <img> lays out exactly as before */
+picture{display:contents}picture>source{display:none}
 /* Layout: corporate contractor site; white sheet with deep navy bands, a fine tile-joint grid as the only texture */
 :root{
   --bg:#ffffff; --alt:#f2f5f7; --ink:#0f1e2b; --muted:#566573; --line:#dbe2e7;
@@ -661,6 +662,7 @@ header.site .btn-primary::after{content:"→";margin-left:8px}
 /* hero */
 .h4-hero{position:relative;background:var(--k0);color:var(--cream);overflow:hidden;isolation:isolate}
 .h4-hero-bg{position:absolute;inset:0 0 0 auto;width:60%;background:url("img/work-pool-leisure.jpg") 50% 45%/cover no-repeat;z-index:-2}
+.h4-hero-bg{background-image:image-set(url("img/opt/work-pool-leisure-1080.avif") type("image/avif"),url("img/opt/work-pool-leisure-1080.webp") type("image/webp"),url("img/work-pool-leisure.jpg") type("image/jpeg"))}
 .h4-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--k0) 0%,var(--k0) 40%,rgba(10,10,11,.7) 47%,rgba(10,10,11,.15) 58%,rgba(10,10,11,0) 66%),linear-gradient(0deg,rgba(10,10,11,.85) 0%,rgba(10,10,11,0) 30%)}
 .h4-hero-in{display:flex;align-items:center;padding-block:84px 76px}
 .h4-copy{max-width:560px}
@@ -725,6 +727,7 @@ header.site .btn-primary::after{content:"→";margin-left:8px}
 /* feature image + quote */
 .h4-feature{position:relative;min-height:520px;display:flex;align-items:center;background:var(--k0);overflow:hidden;isolation:isolate}
 .h4-feature-img{position:absolute;inset:0;background:url("img/tiletrust-sign.jpg") center 30%/cover no-repeat;z-index:-2;opacity:.55}
+.h4-feature-img{background-image:image-set(url("img/opt/tiletrust-sign-1448.avif") type("image/avif"),url("img/opt/tiletrust-sign-1448.webp") type("image/webp"),url("img/tiletrust-sign.jpg") type("image/jpeg"))}
 .h4-feature::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,rgba(10,10,11,.35) 0%,rgba(10,10,11,.9) 75%)}
 .h4-feature-in{width:100%;padding-block:110px;text-align:center}
 .h4-feature figure{margin:0 auto;max-width:46em}
