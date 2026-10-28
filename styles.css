@@ -1,3 +1,8 @@
+@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/poppins-500.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/poppins-600.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/poppins-700.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/poppins-800.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/source-sans-3-var.woff2) format('woff2')}
 /* <picture> wrappers (AVIF/WebP) take no box of their own, so the <img> lays out exactly as before */
 picture{display:contents}picture>source{display:none}
 /* Layout: corporate contractor site; white sheet with deep navy bands, a fine tile-joint grid as the only texture */
