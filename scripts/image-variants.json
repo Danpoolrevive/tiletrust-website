@@ -1,0 +1,2544 @@
+{
+"img/ba-blackshower-after.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+375,
+675,
+825,
+1050,
+1200
+]
+},
+"img/ba-blackshower-during.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+400,
+650,
+800,
+1075,
+1200
+]
+},
+"img/ba-kitchen-after.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+675,
+1350
+]
+},
+"img/ba-kitchen-during.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+626,
+1252
+]
+},
+"img/ba-shower-after.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+396,
+639,
+801,
+900
+]
+},
+"img/ba-shower-before.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+365,
+657,
+730
+]
+},
+"img/ba-walkin-after.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+400,
+650,
+800,
+1075,
+1200
+]
+},
+"img/ba-walkin-during.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+400,
+650,
+800,
+1075,
+1200
+]
+},
+"img/g-job-001.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-002.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-003.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-004.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-005.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-006.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-007.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-009.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-010.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-011.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-012.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-013.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-014.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-015.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-016.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-017.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-018.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-019.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-020.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-021.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-022.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-023.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-024.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-026.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-027.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-028.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-029.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-030.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-032.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-033.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-034.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-036.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-037.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-038.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-039.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-040.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-041.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-042.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-043.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+400,
+640,
+800,
+1080,
+1100
+]
+},
+"img/g-job-044.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-045.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-046.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-047.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-048.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-049.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-050.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-051.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+440,
+660,
+880,
+1100
+]
+},
+"img/g-job-052.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-053.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-054.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-055.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-058.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-059.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-060.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-061.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-062.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-063.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+400,
+640,
+800,
+1080,
+1100
+]
+},
+"img/g-job-064.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-066.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-067.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-068.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-070.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-071.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-072.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-073.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-074.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-075.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-076.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-077.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-080.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-082.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-083.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-084.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-085.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-086.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-087.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-088.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-089.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-090.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-091.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-092.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+400,
+640,
+800,
+1080
+]
+},
+"img/g-job-093.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-095.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-096.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-097.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-099.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+440,
+660,
+880,
+1100
+]
+},
+"img/g-job-100.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-101.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-102.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-103.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-104.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-105.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-106.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-107.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-108.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-109.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-110.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-112.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-114.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-115.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-116.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-117.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-118.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-119.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-120.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-121.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-122.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-124.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-125.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-126.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-127.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-128.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-130.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-131.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-132.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-134.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-135.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-136.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+440,
+660,
+880,
+1100
+]
+},
+"img/g-job-137.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+440,
+660,
+880,
+1100
+]
+},
+"img/g-job-138.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-139.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-140.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-141.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-142.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-143.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-144.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+400,
+640,
+800,
+1080,
+1100
+]
+},
+"img/g-job-146.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-147.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-148.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-149.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-150.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-151.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-152.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-157.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-158.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-159.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-160.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-161.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-162.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-163.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-165.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-job-166.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-167.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-168.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-175.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-176.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+619
+]
+},
+"img/g-job-177.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-180.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-job-181.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+701
+]
+},
+"img/g-new-01.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-new-02.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-new-03.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+438,
+876
+]
+},
+"img/g-new-04.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-new-05.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-new-06.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-new-07.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+428,
+535
+]
+},
+"img/g-new-08.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-new-09.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-new-10.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-new-11.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-new-12.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-new-13.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+366,
+732
+]
+},
+"img/g-new-14.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+619
+]
+},
+"img/g-new-15.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-new-16.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+825
+]
+},
+"img/g-new-17.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+619
+]
+},
+"img/logo-emblem.png": {
+"formats": [
+"webp"
+],
+"widths": [
+155
+]
+},
+"img/logo-wordmark.png": {
+"formats": [
+"webp"
+],
+"widths": [
+401
+]
+},
+"img/tiletrust-sign.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+400,
+640,
+800,
+1080,
+1280,
+1448
+]
+},
+"img/work-attic-bath.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-bath-panel.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+977
+]
+},
+"img/work-bench-front.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-bench-side.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-changing-area.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+380,
+665,
+760,
+950
+]
+},
+"img/work-chevron-floor.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+385,
+630,
+805,
+840
+]
+},
+"img/work-grey-herringbone.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-grey-wetroom.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+408,
+648,
+792,
+1080,
+1200
+]
+},
+"img/work-herringbone-valve.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-herringbone.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-hex-herringbone.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-hex-washroom.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+378,
+648,
+810,
+1080
+]
+},
+"img/work-kitchen-sink.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+1600
+]
+},
+"img/work-loft-slabs.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+995
+]
+},
+"img/work-marble-bath.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-metro-shower.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-niche-feature.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-pattern-floor.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+1043
+]
+},
+"img/work-pattern-metro.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-pool-garden.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+1086
+]
+},
+"img/work-pool-greekkey.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-pool-hydro.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+391,
+782
+]
+},
+"img/work-pool-learner.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+405,
+675,
+810,
+1080
+]
+},
+"img/work-pool-leisure.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+1080
+]
+},
+"img/work-pool-navy-lanes.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+432,
+648,
+756,
+1080
+]
+},
+"img/work-pool-steps-marquee.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+405,
+645,
+795,
+1080,
+1200
+]
+},
+"img/work-pool-white.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-porch-octagon.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-roof-terrace.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-shower-black.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-shower-hex.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-slate-hall.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+400,
+650,
+800,
+1075,
+1250
+]
+},
+"img/work-slate-shower.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-stone-niche.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+582,
+873,
+1164
+]
+},
+"img/work-stonestrip-bath.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-subway-reveal.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-teal-niche.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+400,
+650,
+800,
+1075,
+1200
+]
+},
+"img/work-teal-steps.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-travertine-bath.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-travertine-shower.jpg": {
+"formats": [
+"avif",
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+},
+"img/work-wetroom-floor.jpg": {
+"formats": [
+"webp"
+],
+"widths": [
+399,
+639,
+801,
+1080,
+1200
+]
+}
+}
