@@ -1,0 +1,114 @@
+{
+  "redirects": [
+    {
+      "source": "/areas/birmingham.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/birmingham",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/chester.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/chester",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/glasgow.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/glasgow",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/leeds.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/leeds",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/liverpool.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/liverpool",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/london.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/london",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/manchester.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/manchester",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/preston.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/preston",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/st-helens.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/st-helens",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/stockport.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/stockport",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/wigan.html",
+      "destination": "/areas/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/wigan",
+      "destination": "/areas/",
+      "permanent": true
+    }
+  ]
+}
