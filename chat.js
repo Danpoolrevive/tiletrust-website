@@ -121,8 +121,8 @@
     who: function (c) {
       if (S.a.sector === 'Home') { S.a.role = 'Homeowner'; save(); say('Is this ready to go ahead, or are you getting prices for now?'); }
       else {
-        say('Who are we speaking to, and what stage is the project at?');
-        label('You are', c);
+        say('So we can pass your enquiry to the right person, could you tell us a little about your role and where the project is up to?');
+        label('Your role', c);
         pickGroup(c, ['Client or building owner', 'Main contractor', 'Architect or designer', 'Facilities or estates manager', 'Other'], 'role', false);
         label('Project stage', c);
       }
@@ -201,7 +201,7 @@
       ch.addEventListener('click', function () {
         clearControls(); say('Which part would you like to change?');
         var c2 = controls(), g = el('div', { 'class': 'tc-choices' });
-        [['Project and work', 0], ['Who and stage', 2], ['Location and size', 3], ['Old tiles and materials', 4], ['Timescale', 5], ['Files and notes', 6]].forEach(function (p) {
+        [['Project and work', 0], ['Your role and project stage', 2], ['Location and size', 3], ['Old tiles and materials', 4], ['Timescale', 5], ['Files and notes', 6]].forEach(function (p) {
           var b = el('button', { type: 'button', 'class': 'tc-choice' }, p[0]);
           b.addEventListener('click', function () { go(p[1]); }); g.appendChild(b);
         });
