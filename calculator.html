@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tile Calculator: Floor and Wall Tiles, Adhesive and Grout | TileTrust Ltd</title>
+<meta name="description" content="Free tile calculator for floors and walls. Add each area, take off doors and windows, pick a tile size and pattern, and estimate tiles, boxes, adhesive and grout.">
+<link rel="canonical" href="https://www.tiletrustltd.co.uk/calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TileTrust Ltd">
+<meta property="og:title" content="Tile Calculator: Floor and Wall Tiles, Adhesive and Grout | TileTrust Ltd">
+<meta property="og:description" content="Free tile calculator for floors and walls. Add each area, take off doors and windows, pick a tile size and pattern, and estimate tiles, boxes, adhesive and grout.">
+<meta property="og:url" content="https://www.tiletrustltd.co.uk/calculator.html">
+<meta name="theme-color" content="#111214">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="96x96" href="img/icon-96.png"><link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:image" content="https://www.tiletrustltd.co.uk/img/tiletrust-sign.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tile Calculator: Floor and Wall Tiles, Adhesive and Grout | TileTrust Ltd">
+<meta name="twitter:description" content="Free tile calculator for floors and walls. Add each area, take off doors and windows, pick a tile size and pattern, and estimate tiles, boxes, adhesive and grout.">
+<meta name="twitter:image" content="https://www.tiletrustltd.co.uk/img/tiletrust-sign.jpg">
+<link rel="preload" href="/fonts/source-sans-3-var.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="styles.css">
+<style>
+.calc{background:var(--k1)}
+.calc [hidden]{display:none!important}
+.c-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:start}
+.c-in{display:grid;gap:22px;min-width:0}
+.c-card{background:var(--k2);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:24px}
+.c-card h2{display:flex;align-items:center;gap:12px;margin:0 0 10px;font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--cream)}
+.c-card h2 span{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--g2);border-radius:50%;color:var(--g1);font-size:.85rem}
+.c-card h3{margin:18px 0 10px;font-family:var(--display);font-weight:600;font-size:1rem;color:var(--g1)}
+.c-note{color:var(--dim);font-size:.9rem;line-height:1.55;margin:0 0 12px}
+.c-row{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;align-items:end;padding:16px 0;border-top:1px solid rgba(255,255,255,.08)}
+.c-sg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.c-card select{max-width:100%;min-width:0;text-overflow:ellipsis}
+.c-row>.f{grid-column:span 2}.c-row>.c-name{grid-column:span 3}.c-row>.c-del{grid-column:span 1}
+.c-wide{grid-column:1/-1}.c-custom{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.c-sg .c-note{margin:0}
+.c-btn,.c-del{font:600 .92rem var(--display);color:var(--g1);background:transparent;border:1px solid var(--hair);border-radius:2px;padding:11px 16px;min-height:46px;cursor:pointer}
+.c-btn:hover,.c-del:hover{border-color:var(--g2)}
+.c-del{color:var(--sand);padding-inline:8px}
+.c-adds,.c-copy{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.c-check{display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;color:var(--cream)}
+.c-check input{width:20px;height:20px;accent-color:var(--g2)}
+.c-res{position:sticky;top:96px}
+.c-kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 16px}
+.c-kpis div{background:var(--k3);border:1px solid rgba(255,255,255,.06);border-radius:3px;padding:14px}
+.c-kpis b{display:block;font:600 1.7rem/1.1 var(--display);color:var(--g1);font-variant-numeric:tabular-nums}
+.c-kpis small{color:var(--sand);font-size:.85rem}
+.c-tw{overflow-x:auto;margin-bottom:14px}
+.c-t{width:100%;border-collapse:collapse;font-size:.92rem;font-variant-numeric:tabular-nums}
+.c-t th,.c-t td{padding:8px 6px;border-bottom:1px solid rgba(255,255,255,.07);text-align:right;white-space:nowrap}
+.c-t th[scope=row]{text-align:left;font-weight:400;color:var(--sand);white-space:normal}
+.c-t thead th{color:var(--dim);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.c-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.c-err{margin:0 0 14px;padding:12px 14px 12px 32px;background:rgba(214,98,74,.1);border-left:3px solid #d6624a;color:#f1c3b8;font-size:.92rem}
+.c-warn{margin:18px 0 16px;padding-top:16px;border-top:1px solid var(--hair);color:var(--cream);font-size:.95rem}
+.c-cta{width:100%;justify-content:center}
+@media(max-width:960px){.c-grid{grid-template-columns:minmax(0,1fr)}.c-res{position:static}}
+@media(max-width:760px){.c-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.c-row>.f{grid-column:span 1}.c-row>.c-name,.c-row>.c-del,.c-pat{grid-column:1/-1}.c-row>.c-del{order:9}.c-sg{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.c-card{padding:18px}}
+@media(max-width:380px){.c-sg,.c-custom{grid-template-columns:minmax(0,1fr)}}
+</style>
+<!-- seo-ld --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tiletrustltd.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Tile calculator", "item": "https://www.tiletrustltd.co.uk/calculator.html"}]}</script><!-- /seo-ld -->
+</head>
+<body>
+<div class="topbar"><div class="wrap"><div><span class="loc">Based in Warrington, Cheshire</span><span class="loc">Working nationwide</span></div><div><a href="tel:+447434005958">Dan 07434 005958</a><span><a href="tel:+447966002106">Jay 07966 002106</a></span><span class="loc"><a href="mailto:info@tiletrustltd.co.uk">info@tiletrustltd.co.uk</a></span></div></div></div>
+<header class="site"><div class="wrap">
+<a class="logo glogo" href="./#top" aria-label="TileTrust Ltd home"><picture><source type="image/webp" srcset="img/opt/logo-emblem-155.webp"><img class="lg-e" src="img/logo-emblem.png" alt="" width="77" height="64" decoding="async"></picture><picture><source type="image/webp" srcset="img/opt/logo-wordmark-401.webp"><img class="lg-w" src="img/logo-wordmark.png" alt="TileTrust Commercial Tiling" width="200" height="48" decoding="async"></picture></a>
+<nav class="main" id="main-nav" aria-label="Main">
+<a href="services/">Services</a>
+<a href="who-we-tile-for.html">Sectors</a>
+<a href="our-work.html">Our work</a>
+<a href="pools.html">Pools</a>
+<a href="areas/">Areas</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div class="hdr-r"><a class="btn btn-primary" href="contact.html">Request a quote</a><button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menu"><span></span><span></span><span></span></button></div>
+</div></header>
+<main id="top">
+<section class="page-hero" style="padding:0"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="./">Home</a><span>/</span>Tile calculator</nav>
+<div style="margin-top:22px"><span class="eyebrow">Tile calculator</span></div><h1>Work out your tiles, adhesive and grout.</h1><p class="lead">Add each floor and wall, take off doors, windows and fixed units, then pick a tile and pattern. Quantities update as you type.</p></div></section>
+<section class="calc"><div class="wrap">
+<form id="calc" class="c-grid" novalidate autocomplete="off">
+<div class="c-in">
+<div class="c-card">
+<h2><span>1</span>Areas to tile</h2>
+<p class="c-note">Measure in metres. Floors are length × width, walls are width × height. Deductions are in m² (a standard door is roughly 1.6 m²).</p>
+<div id="c-rows"></div>
+<div class="c-adds"><button type="button" class="c-btn" data-add="floor">+ Add floor</button><button type="button" class="c-btn" data-add="wall">+ Add wall</button></div>
+</div>
+<div class="c-card">
+<h2><span>2</span>Tiles</h2>
+<label class="c-check"><input type="checkbox" id="c-same" checked> Use the same tiles for floors and walls</label>
+<div class="c-spec" id="f-spec">
+<h3 id="f-h">Your tiles</h3>
+<div class="c-sg">
+<div class="f c-wide"><label for="f-size">Tile size</label><select id="f-size"><option value="100x100">100 × 100 mm (often on mesh sheets)</option><option value="150x150">150 × 150 mm</option><option value="200x200">200 × 200 mm</option><option value="300x300">300 × 300 mm</option><option value="300x600">300 × 600 mm</option><option value="600x600" selected>600 × 600 mm</option><option value="600x1200">600 × 1200 mm</option><option value="800x800">800 × 800 mm</option><option value="1200x1200">1200 × 1200 mm</option><option value="custom">Custom size</option></select></div>
+<div class="c-custom c-wide" id="f-custom" hidden><div class="f"><label for="f-ca">Tile length (mm)</label><input id="f-ca" inputmode="decimal" placeholder="e.g. 250"></div><div class="f"><label for="f-cb">Tile width (mm)</label><input id="f-cb" inputmode="decimal" placeholder="e.g. 400"></div></div>
+<p class="c-note c-wide" id="f-mosaic" hidden>100 × 100 tiles and mosaics often come on mesh sheets. The tile count below is single tiles, so check how many come on a sheet or use m² per box.</p>
+<div class="f"><label for="f-thick">Tile thickness (mm)</label><input id="f-thick" inputmode="decimal" value="10"></div>
+<div class="f"><label for="f-joint">Grout joint (mm)</label><input id="f-joint" inputmode="decimal" value="3"></div>
+<div class="f c-pat"><label for="f-pattern">Laying pattern</label><select id="f-pattern"><option value="straight">Straight (10%)</option><option value="brick">Brick or offset (12%)</option><option value="diagonal">Diagonal (15%)</option><option value="herringbone">Herringbone (20%)</option></select></div>
+<div class="f"><label for="f-waste">Wastage (%)</label><input id="f-waste" inputmode="decimal" value="10"></div>
+<div class="f"><label for="f-box">Per box (optional)</label><input id="f-box" inputmode="decimal" placeholder="e.g. 1.44"></div>
+<div class="f"><label for="f-unit">Box unit</label><select id="f-unit"><option value="m2">m² per box</option><option value="tiles">Tiles per box</option></select></div>
+<div class="f c-wide"><label for="f-adh">Adhesive bed</label><select id="f-adh"><option value="auto">Auto from tile size</option><option value="3">Small tiles: 6 mm notch, about 3 kg/m²</option><option value="4.5">Medium tiles: 10 mm notch, about 4.5 kg/m²</option><option value="6">Large format: 12 mm notch, back-buttered, about 6 kg/m²</option></select></div>
+</div></div><div class="c-spec" id="w-spec" hidden>
+<h3 id="w-h">Wall tiles</h3>
+<div class="c-sg">
+<div class="f c-wide"><label for="w-size">Tile size</label><select id="w-size"><option value="100x100">100 × 100 mm (often on mesh sheets)</option><option value="150x150">150 × 150 mm</option><option value="200x200">200 × 200 mm</option><option value="300x300">300 × 300 mm</option><option value="300x600" selected>300 × 600 mm</option><option value="600x600">600 × 600 mm</option><option value="600x1200">600 × 1200 mm</option><option value="800x800">800 × 800 mm</option><option value="1200x1200">1200 × 1200 mm</option><option value="custom">Custom size</option></select></div>
+<div class="c-custom c-wide" id="w-custom" hidden><div class="f"><label for="w-ca">Tile length (mm)</label><input id="w-ca" inputmode="decimal" placeholder="e.g. 250"></div><div class="f"><label for="w-cb">Tile width (mm)</label><input id="w-cb" inputmode="decimal" placeholder="e.g. 400"></div></div>
+<p class="c-note c-wide" id="w-mosaic" hidden>100 × 100 tiles and mosaics often come on mesh sheets. The tile count below is single tiles, so check how many come on a sheet or use m² per box.</p>
+<div class="f"><label for="w-thick">Tile thickness (mm)</label><input id="w-thick" inputmode="decimal" value="10"></div>
+<div class="f"><label for="w-joint">Grout joint (mm)</label><input id="w-joint" inputmode="decimal" value="3"></div>
+<div class="f c-pat"><label for="w-pattern">Laying pattern</label><select id="w-pattern"><option value="straight">Straight (10%)</option><option value="brick">Brick or offset (12%)</option><option value="diagonal">Diagonal (15%)</option><option value="herringbone">Herringbone (20%)</option></select></div>
+<div class="f"><label for="w-waste">Wastage (%)</label><input id="w-waste" inputmode="decimal" value="10"></div>
+<div class="f"><label for="w-box">Per box (optional)</label><input id="w-box" inputmode="decimal" placeholder="e.g. 1.44"></div>
+<div class="f"><label for="w-unit">Box unit</label><select id="w-unit"><option value="m2">m² per box</option><option value="tiles">Tiles per box</option></select></div>
+<div class="f c-wide"><label for="w-adh">Adhesive bed</label><select id="w-adh"><option value="auto">Auto from tile size</option><option value="3">Small tiles: 6 mm notch, about 3 kg/m²</option><option value="4.5">Medium tiles: 10 mm notch, about 4.5 kg/m²</option><option value="6">Large format: 12 mm notch, back-buttered, about 6 kg/m²</option></select></div>
+</div></div>
+</div>
+<div class="c-card">
+<h2><span>3</span>Grout</h2>
+<div class="f"><label for="c-grout">Grout type</label><select id="c-grout"><option value="cement">Cement grout (density 1.6)</option><option value="epoxy">Epoxy grout (density 1.5)</option></select></div>
+</div>
+</div>
+<aside class="c-res c-card" aria-labelledby="c-res-h">
+<h2 id="c-res-h">Your estimate</h2>
+<div aria-live="polite">
+<ul id="c-err" class="c-err" hidden></ul>
+<p id="c-empty" class="c-note">Enter at least one length and width to see your quantities.</p>
+<div id="c-out" hidden>
+<div class="c-kpis">
+<div><b id="k-area">0</b><small>m² to tile</small></div>
+<div><b id="k-tiles">0</b><small>tiles inc. wastage</small></div>
+<div><b id="k-adh">0</b><small>20 kg bags adhesive</small></div>
+<div><b id="k-grout">0</b><small>5 kg units <span id="k-gt">cement</span> grout</small></div>
+</div>
+<div class="c-tw"><table class="c-t"><thead><tr><th scope="col"><span class="c-sr">Item</span></th><th scope="col">Floors</th><th scope="col">Walls</th><th scope="col">Combined</th></tr></thead><tbody id="c-tbody"></tbody></table></div>
+<p class="c-note">Tiles use the tile size plus one grout joint, then add your wastage, rounded up. Combined tiles and boxes only show when floors and walls use the same tile.</p>
+<p class="c-note">Adhesive is a typical cementitious adhesive estimate for the tiled area. Auto picks about 3 kg/m² for tiles up to 300 mm (6 mm notch), 4.5 kg/m² up to 600 mm (10 mm notch) and 6 kg/m² above that (12 mm notch, back-buttered). Manufacturer data varies, so check the bag.</p>
+<p class="c-note">Grout uses ((A + B) ÷ (A × B)) × joint × thickness × density, with A and B the tile sides in mm, plus your wastage.</p>
+<div class="c-copy"><button type="button" class="c-btn" id="c-copy">Copy results</button><span id="c-copied" class="c-note" aria-live="polite"></span></div>
+</div>
+</div>
+<p class="c-warn">Estimates only. Measure carefully and allow for cuts, levels and substrate prep. For commercial jobs we survey and quote properly.</p>
+<a class="btn btn-primary c-cta" href="contact.html">Get a site survey and quote</a>
+</aside>
+</form>
+</div></section>
+
+<section class="cta" style="padding:0"><div class="wrap"><div><h2>Want it measured properly?</h2><p>Send us the drawings or details and we'll survey, measure and price the job.</p></div>
+<div class="btns"><a class="btn btn-primary" href="contact.html">Get a site survey and quote</a><a class="btn btn-ghost" href="tel:+447434005958">Call 07434 005958</a></div></div></section>
+</main>
+<footer><div class="wrap">
+<div class="fgrid">
+<div><a class="logo glogo" href="./#top" aria-label="TileTrust Ltd home"><picture><source type="image/webp" srcset="img/opt/logo-emblem-155.webp"><img class="lg-e" src="img/logo-emblem.png" alt="" width="77" height="64" loading="lazy" decoding="async"></picture><picture><source type="image/webp" srcset="img/opt/logo-wordmark-401.webp"><img class="lg-w" src="img/logo-wordmark.png" alt="TileTrust Commercial Tiling" width="200" height="48" loading="lazy" decoding="async"></picture></a>
+<p class="about-f">Commercial and domestic tiling contractors based in Warrington, Cheshire, working nationwide.</p>
+<ul style="margin-top:16px"><li><a href="tel:+447434005958">Dan: 07434 005958</a></li><li><a href="tel:+447966002106">Jay: 07966 002106</a></li><li><a href="mailto:info@tiletrustltd.co.uk">info@tiletrustltd.co.uk</a></li></ul></div>
+<div><h4>Services</h4><ul><li><a href="services/commercial-floor-tiling.html">Commercial floor tiling</a></li><li><a href="services/commercial-wall-tiling.html">Commercial wall tiling</a></li><li><a href="services/bathroom-and-wet-room-tiling.html">Bathroom and wet room tiling</a></li><li><a href="services/self-levelling-floors.html">Self-levelling floors</a></li><li><a href="services/large-format-porcelain.html">Large-format porcelain</a></li><li><a href="services/changing-rooms-and-wet-areas.html">Changing rooms and wet areas</a></li><li><a href="services/commercial-kitchen-tiling.html">Commercial kitchen tiling</a></li><li><a href="services/">All services</a></li></ul></div>
+<div><h4>Areas</h4><ul><li><a href="areas/warrington.html">Warrington</a></li><li><a href="areas/#north-west">North West</a></li><li><a href="areas/#yorkshire">Yorkshire</a></li><li><a href="areas/#midlands">Midlands</a></li><li><a href="areas/#scotland">Scotland</a></li><li><a href="areas/#london-and-the-south">London and the South</a></li><li><a href="areas/">All areas</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About us</a></li><li><a href="our-work.html">Our work</a></li><li><a href="who-we-tile-for.html">Who we tile for</a></li><li><a href="pools.html">Swimming pools</a></li><li><a href="knowledge/">Knowledge hub</a></li><li><a href="calculator.html">Tile calculator</a></li><li><a href="faq.html">FAQs</a></li><li><a href="health-and-safety.html">Health and safety</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy notice</a></li><li><a href="https://www.poolrevive.co.uk" target="_blank" rel="noopener">PoolRevive</a></li></ul></div>
+</div>
+<div class="legal"><span>© <span id="yr">2026</span> TileTrust Ltd. Registered in England and Wales, company no. 17323370. Registered office: 128 City Road, London, EC1V 2NX. Based in Warrington, Cheshire.</span><span>PoolRevive is a trading name of TileTrust Ltd.</span></div>
+</div></footer>
+<button type="button" class="tc-open" aria-expanded="false" aria-label="Chat with us about a quote"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Get a quote</span></button><script src="/chat.js" defer></script>
+<template id="c-row-tpl"><div class="c-row">
+<div class="f c-name"><label data-for="name">Area name</label><input data-k="name" maxlength="40" placeholder="e.g. Kitchen floor"></div>
+<div class="f"><label data-for="type">Type</label><select data-k="type"><option value="floor">Floor</option><option value="wall">Wall</option></select></div>
+<button type="button" class="c-del" aria-label="Remove this area">Remove</button>
+<div class="f"><label data-for="a">Length (m)</label><input data-k="a" inputmode="decimal" placeholder="0.00"></div>
+<div class="f"><label data-for="b">Width (m)</label><input data-k="b" inputmode="decimal" placeholder="0.00"></div>
+<div class="f"><label data-for="ded">Deductions (m²)</label><input data-k="ded" inputmode="decimal" placeholder="0"></div>
+</div></template>
+<script src="/calc.js" defer></script>
+<script>
+(function(){
+  var mb=document.getElementById('menu-btn'),nv=document.getElementById('main-nav');
+  if(mb){mb.addEventListener('click',function(){var o=nv.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  nv.addEventListener('click',function(e){if(e.target.tagName==='A'){nv.classList.remove('open');mb.setAttribute('aria-expanded','false')}});}
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+  var f=document.getElementById('quote'),msg=document.getElementById('formmsg');
+  if(f){f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim()};
+    if(!v('q-name')||!v('q-email')){msg.textContent='Please add your name and email so we can reply.';return;}
+    if(!document.getElementById('q-consent').checked){msg.textContent='Please tick the box to agree to us using your details to reply.';return;}
+    var body='Name: '+v('q-name')+'\nCompany: '+v('q-company')+'\nPhone: '+v('q-phone')+'\nEmail: '+v('q-email')+'\nProject type: '+v('q-sector')+'\nLocation: '+v('q-loc')+'\n\n'+v('q-msg')+'\n\n(Photos or drawings attached if available)';
+    var href='mailto:info@tiletrustltd.co.uk?subject='+encodeURIComponent('Quote request – '+v('q-sector'))+'&body='+encodeURIComponent(body);
+    msg.textContent='Your email app should open with the enquiry ready. Attach any photos or drawings, then send. If it doesn\u2019t open, email info@tiletrustltd.co.uk directly.';
+    window.location.href=href;
+  });}
+
+})();
+</script>
+</body>
+</html>
