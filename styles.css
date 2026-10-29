@@ -883,3 +883,5 @@ header.site .btn-primary{padding:11px 18px;font-size:.92rem}
 .lc-ic{margin-bottom:auto;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;border:1px solid var(--g2);color:var(--g2)}
 .lcard.lc-ph:hover,.lcard.lc-plain:hover{border-color:var(--hair)}
 @media(prefers-reduced-motion:reduce){.lc-ph img{transition:none}}
+.h4-card .ph{position:relative}
+.h4-card .ill{position:absolute;right:8px;bottom:8px;padding:3px 8px;border-radius:2px;background:rgba(0,0,0,.55);color:#e9e3d8;font-size:.68rem;letter-spacing:.04em;line-height:1.4;pointer-events:none}
