@@ -159,6 +159,16 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/services/self-levelling-floors.html",
+      "destination": "/services/floor-and-wall-preparation.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/self-levelling-floors",
+      "destination": "/services/floor-and-wall-preparation.html",
+      "permanent": true
     }
   ],
   "headers": [
