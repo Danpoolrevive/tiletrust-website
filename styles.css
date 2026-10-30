@@ -900,19 +900,19 @@ nav.main a.nav-calc svg{flex:none}
 @media(max-width:760px){.calc-card{grid-template-columns:auto 1fr;padding:22px}.calc-go{grid-column:1/-1;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.calc-card{transition:none}}
 /* ---- layout upgrade: hero, credentials rail, work mosaic, services bento, footer brand ---- */
-.h4-hero-bg{background-image:image-set(url("img/opt/job-pool-hall-arches-2-1080.avif") type("image/avif"),url("img/opt/job-pool-hall-arches-2-1080.webp") type("image/webp"),url("img/job-pool-hall-arches-2.jpg") type("image/jpeg"));background-position:50% 30%}
+.h4-hero-bg{background-image:image-set(url("img/opt/job-pool-hall-arches-2-1080.avif") type("image/avif"),url("img/opt/job-pool-hall-arches-2-1080.webp") type("image/webp"),url("img/job-pool-hall-arches-2.jpg") type("image/jpeg"));background-position:50% 88%}
 @media(min-width:961px){
  .h4-hero{min-height:clamp(620px,calc(100svh - 118px),900px);display:flex;align-items:center}
  .h4-hero>.wrap{width:100%}
  .h4-hero-bg{width:60%}
- .h4-hero::before{background:linear-gradient(90deg,var(--k0) 0%,var(--k0) 42%,rgba(10,10,11,.94) 46%,rgba(10,10,11,.8) 50%,rgba(10,10,11,.55) 55%,rgba(10,10,11,.3) 61%,rgba(10,10,11,.12) 67%,rgba(10,10,11,0) 74%),linear-gradient(0deg,rgba(10,10,11,.7) 0%,rgba(10,10,11,0) 22%)}
+ .h4-hero::before{background:linear-gradient(90deg,var(--k0) 0%,var(--k0) 42%,rgba(10,10,11,.94) 46%,rgba(10,10,11,.8) 50%,rgba(10,10,11,.55) 55%,rgba(10,10,11,.3) 61%,rgba(10,10,11,.12) 67%,rgba(10,10,11,0) 74%),linear-gradient(0deg,rgba(10,10,11,.35) 0%,rgba(10,10,11,0) 10%)}
  .h4-hero h1{font-size:clamp(2.9rem,5.2vw,4.6rem)}
  .h4-copy{max-width:720px}
  .h4-hero h1{max-width:12.5em}
  .h4-lead{max-width:34em}
 }
 @media(max-width:960px){
- .h4-hero-bg{aspect-ratio:4/3;background-image:image-set(url("img/opt/job-pool-hall-arches-2-800.avif") type("image/avif"),url("img/opt/job-pool-hall-arches-2-800.webp") type("image/webp"),url("img/job-pool-hall-arches-2.jpg") type("image/jpeg"));background-position:50% 66%}
+ .h4-hero-bg{aspect-ratio:4/3;background-image:image-set(url("img/opt/job-pool-hall-arches-2-800.avif") type("image/avif"),url("img/opt/job-pool-hall-arches-2-800.webp") type("image/webp"),url("img/job-pool-hall-arches-2.jpg") type("image/jpeg"));background-position:50% 92%}
 }
 .cred-rail{background:var(--k0);border-top:1px solid rgba(201,160,99,.28);border-bottom:1px solid rgba(201,160,99,.28)}
 .cred-rail ul{list-style:none;margin:0;padding:22px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 28px}
